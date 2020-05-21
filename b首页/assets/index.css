@@ -1,0 +1,258 @@
+:root,body {
+  height: 100vh;
+}
+.app {
+  height: 100%;
+  overflow-y: scroll;
+
+} 
+.header {
+  width: 100vw;
+  height: 6vh;
+  padding-top: 3vw;
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.header .logo svg {
+  width: 16vw;
+  height: 5vh;
+  margin-top: -5px;
+}
+
+.header .seach {
+  background-color: burlywood;
+  width: 35vw;
+  height: 6.4vw;
+  display: flex;
+  align-items: center;
+  border-radius: 3.2vw;
+  padding-right: 3vw;
+  background: #f4f4f4;
+  color: #999;
+}
+
+.header .seach svg {
+  width: 20px;
+  height: 12px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.header .seach span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header .headPortrait svg {
+  width: 6.4vw;
+  height: 6.4vw;
+  border-radius: 50%;
+}
+
+.header .app {
+  width: 21vw;
+  height: 6.4vw;
+  background: #fb7299;
+  color: #fff;
+  font-size: 3.46vw;
+  line-height: 6.4vw;
+  text-align: center;
+  border-radius: 3px;
+}
+
+
+.nav {
+  position: fixed;
+  top: 51px;
+  height: 11vw;
+  display: flex;
+  background-color: #fff;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+.nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #e7e7e7;
+}
+.nav ul {
+  white-space: nowrap;
+  overflow-x: scroll;
+  width: 88vw;
+}
+.nav ul::-webkit-scrollbar {
+  display: none;
+}
+
+.nav ul li,.navDown li {
+  display: inline-block;
+  font-size: 3.9vw;
+  margin: 0 4vw;
+  height: 10vw;
+  line-height: 10vw;
+  border-bottom: 2px solid transparent;
+}
+
+ul li.nav-active {
+  border-bottom: 2px solid #fb7299;
+  color: #fb7299;
+}
+.nav  svg {
+  width: 6vw;
+  height: 6vw;
+  margin-left: 12px;
+  margin-top:8px;
+}
+.navDown {
+  position: fixed;
+  top: -130px;
+  background-color: #fff;
+  z-index: 2;
+  transition: all 0.3s;
+}
+.navDown.hide {
+  top: 52px;
+}
+.navDown svg {
+  width: 6vw;
+  height: 6vw;
+  position: relative;
+  left: 50vw;
+  transform: translateX(-11px);
+}
+
+
+.banner {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 99px;
+  width: 94vw;
+  height: 104px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.banner ul{
+  display: flex;
+  position: relative;
+  height: 100%;
+  transition: left 0.6s;
+  width: calc(94vw*4);
+}
+.banner ul li a img {
+  width: 96vw;
+  height: 100%;
+}
+.circle {
+  position: absolute;
+  bottom: 3vw;
+  right: 3vw;
+  display: flex;
+}
+.cirle-item {
+  width: 1.7vw;
+  height: 1.7vw;
+  border-radius: 50%;
+  margin: 0 0.6vw;
+  background-color: #fff;
+}
+.cirle-item.now {
+  background-color: #fb7299;
+}
+
+
+.video {
+  height: 100%;
+}
+.video ul {
+  margin-top: 27vw;
+}
+.video ul::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.video ul li {
+  width: 50%;
+  height: 45vw;
+  float: left;
+  box-sizing: border-box;
+  padding:10px;
+  line-height: 5vw;
+}
+.video ul li .top .img {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.video ul li .top img {
+  width: 100%;
+  height: 30vw;
+}
+.video ul li .top .describe {
+  position: absolute;
+  bottom: 0vw;
+  display: flex;
+  background-image: linear-gradient(to top,rgba(33,33,33),rgba(33,33,33,.1));
+  color: #ccc;
+  height: 5vw;
+  width: 100%;
+}
+.video ul li .top .describe .left,
+.video ul li .top .describe .right {
+  display: flex;
+}
+.video ul li .top .describe .playNum {
+  position: absolute;
+  left: 5vw;
+  margin-left: 10px;
+}
+.video ul li .top .describe .comNum {
+  position: absolute;
+  right: 6vw;
+}
+.video ul li .bottom {
+  margin-top: 1.6vw;
+  font-size: 3.6vw;
+  color: #212121;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.video > img {
+  width: 40vw;
+  height: 40vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6vw;
+  text-align: center;
+}
+.video > p {
+  font-size: 3.9vw;
+  text-align: center;
+  margin: 3vw 0;
+}
+
+
+.footer {
+  position: relative;
+  top: 60vw;
+  text-align: center;
+  line-height: 5vw;
+  margin-bottom: 10vw;
+}
